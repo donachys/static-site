@@ -1,0 +1,25 @@
+languageCode = "en-us"
+title = "Shaun Donachy"
+baseURL = "http://localhost:1313/"
+theme = "dopetrope"
+
+[params.projects]
+    title = "Projects"
+    foldername = "projects"
+    findoutmoretext = "Check it out"
+
+[params.blog]
+    title = "Blog"
+    viewalltext = "View All"
+    foldername = "blog"
+
+[params.gallery]
+    title = "Gallery"
+    foldername = "gallery"
+    findoutmoretext = "Check it out"
+
+[params.settings]
+    googleanalytics = ""
+
+[params.highlight]
+    style = "railscasts"

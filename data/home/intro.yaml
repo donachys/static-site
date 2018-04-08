@@ -1,0 +1,12 @@
+sections:
+- icon: 'fa-cog'
+  title: 'Projects'
+  description: "Things I've worked on."
+
+- icon: 'fa-pencil'
+  title: 'Blog'
+  description: "Words I've written."
+
+- icon: 'fa-camera-retro'
+  title: 'Gallery'
+  description: 'Art and fun. (Yet to come!)'

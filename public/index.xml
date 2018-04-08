@@ -26,7 +26,7 @@
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://shaundonachy.com/projects/kubeval-online/</guid>
-      <description> Validates kubernetes yaml files online. --- api:  </description>
+      <description>Validate Kubernetes (k8s) yaml files online. This project was inspired by and based on garethr&amp;rsquo;s kubeval. After attending his talk at Kubecon in December 2017 I put this together to make use of kubeval to perform validations by pasting into a web interface. Garethr&amp;rsquo;s kubeval already has a nice CLI you can use as part of a CI/CD system, and kubevalonline supplements this tool for use during the development process.</description>
     </item>
     
     <item>

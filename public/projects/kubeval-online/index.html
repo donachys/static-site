@@ -63,7 +63,7 @@
 				
 				
 <article class="box post">
-    <a href="#" class="image featured"><img src="http://shaundonachy.com/images/pic01.jpg" alt="" /></a>
+    <a href="#" class="image featured"><img src="http://shaundonachy.com/images/kubeval_online.png" alt="" /></a>
     <header>
         <h2>Kubeval Online</h2>
         
@@ -72,14 +72,51 @@
     </header>
     
 
-<h4 id="validates-kubernetes-yaml-files-online">Validates kubernetes yaml files online.</h4>
+<h3 id="validate-kubernetes-k8s-yaml-files-online">Validate Kubernetes (k8s) yaml files online.</h3>
 
-<pre><code class="language-yaml">---
-api:
+<p>This project was inspired by and based on <a href="https://github.com/garethr/kubeval">garethr&rsquo;s kubeval</a>. After attending his talk at Kubecon in December 2017 I put this together to make use of kubeval to perform validations by pasting into a web interface. Garethr&rsquo;s kubeval already has a nice CLI you can use as part of a CI/CD system, and kubevalonline supplements this tool for use during the development process.</p>
 
+<p>Given a kubernetes configuration file with an invalid value such as:</p>
+
+<pre><code class="language-json">apiVersion: v1
+kind: Service
+metadata:
+  name: redis-master
+  labels:
+    app: redis
+    tier: backend
+    role: master
+spec:
+  ports:
+    # the port that this service should serve on
+  - port: sds
+    targetPort: 6379
+  selector:
+    app: redis
+    tier: backend
+    role: master
 </code></pre>
 
-<p><img src="../../images/pic06.jpg" alt="test" /></p>
+<p>kubeval recognizes that port values should be integer type and not string type then responds with an error:</p>
+
+<pre><code class="language-json">{
+  &quot;Results&quot;: [
+    {
+      &quot;Kind&quot;: &quot;Service&quot;,
+      &quot;Success&quot;: false,
+      &quot;Errors&quot;: [
+        &quot;Invalid type. Expected: integer, given: string&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<p><code>kubectl run</code> provides a <code>--dry-run</code> flag which can also be used to partially verify that a declaration is valid, but kubeval provides additional information that is valuable when debugging. A handy tool for the kubernaut!</p>
+
+<p>The source code is hosted <a href="https://github.com/donachys/kubevalonline">on github</a>. The image can be pulled <a href="https://hub.docker.com/r/donachys/kubevalonline/">from dockerhub</a>.</p>
+
+<p><a href="https://travis-ci.org/donachys/kubevalonline">Travis CI</a> and <a href="https://coveralls.io/github/donachys/kubevalonline?branch=master">coveralls</a> handle the build and code coverage.</p>
 
 </article>
 

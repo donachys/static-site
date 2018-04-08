@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shaun Donachy</title>
+    <link>http://shaundonachy.com/</link>
+    <description>Recent content on Shaun Donachy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shaundonachy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Static Site Generator - Hugo</title>
+      <link>http://shaundonachy.com/blog/static-site-with-hugo/</link>
+      <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaundonachy.com/blog/static-site-with-hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubeval Online</title>
+      <link>http://shaundonachy.com/projects/kubeval-online/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaundonachy.com/projects/kubeval-online/</guid>
+      <description> Validates kubernetes yaml files online. --- api:  </description>
+    </item>
+    
+    <item>
+      <title>Automaton Pi</title>
+      <link>http://shaundonachy.com/projects/automaton-pi/</link>
+      <pubDate>Sun, 20 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaundonachy.com/projects/automaton-pi/</guid>
+      <description> A raspberry pi project def automaton_pi(): pass  </description>
+    </item>
+    
+    <item>
+      <title>2d-midpoint-displacement-rust</title>
+      <link>http://shaundonachy.com/projects/2d-midpoint-displacement-rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaundonachy.com/projects/2d-midpoint-displacement-rust/</guid>
+      <description> Scenery image generator written in rust sample codes  </description>
+    </item>
+    
+  </channel>
+</rss>

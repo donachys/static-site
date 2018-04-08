@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Shaun Donachy</title>
+    <link>http://shaundonachy.com/blog/</link>
+    <description>Recent content in Blogs on Shaun Donachy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shaundonachy.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Static Site Generator - Hugo</title>
+      <link>http://shaundonachy.com/blog/static-site-with-hugo/</link>
+      <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaundonachy.com/blog/static-site-with-hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,6 @@
 languageCode = "en-us"
-title = "Dopetrope"
-baseURL = "https://shaundonachy.com/"
+title = "Shaun Donachy"
+baseURL = "http://shaundonachy.com/"
 theme = "dopetrope"
 
 [params.projects]

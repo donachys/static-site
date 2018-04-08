@@ -1,3 +1,7 @@
 [submodule "themes/dopetrope"]
 	path = themes/dopetrope
 	url = git@github.com:curttimson/hugo-theme-dopetrope.git
+[submodule "public"]
+	path = public
+	url = git@github.com:donachys/donachys.github.io.git
+	branch = master

@@ -3,49 +3,69 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://shaundonachy.com/blog/static-site-with-hugo/</loc>
+    <loc>https://shaundonachy.com/blog/static-site-with-hugo/</loc>
     <lastmod>2018-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/projects/kubeval-online/</loc>
+    <loc>https://shaundonachy.com/projects/kubeval-online/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/projects/automaton-pi/</loc>
-    <lastmod>2014-07-20T00:00:00+00:00</lastmod>
+    <loc>https://shaundonachy.com/projects/2d-midpoint-displacement-rust/</loc>
+    <lastmod>2017-01-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/projects/2d-midpoint-displacement-rust/</loc>
+    <loc>https://shaundonachy.com/projects/automaton-pi/</loc>
+    <lastmod>2014-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/blog/</loc>
+    <loc>https://shaundonachy.com/blog/</loc>
     <lastmod>2018-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/categories/</loc>
+    <loc>https://shaundonachy.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/projects/</loc>
+    <loc>https://shaundonachy.com/tags/go/</loc>
+    <lastmod>2018-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shaundonachy.com/tags/golang/</loc>
+    <lastmod>2018-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shaundonachy.com/tags/hugo/</loc>
+    <lastmod>2018-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shaundonachy.com/projects/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/</loc>
+    <loc>https://shaundonachy.com/</loc>
     <lastmod>2018-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://shaundonachy.com/tags/</loc>
+    <loc>https://shaundonachy.com/tags/</loc>
+    <lastmod>2018-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

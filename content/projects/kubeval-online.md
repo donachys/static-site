@@ -50,6 +50,7 @@ kubeval recognizes that port values should be integer type and not string type t
 
 `kubectl run` provides a `--dry-run` flag which can also be used to partially verify that a declaration is valid, but kubeval provides additional information that is valuable when debugging. A handy tool for the kubernaut!
 
-The source code is hosted [on github](https://github.com/donachys/kubevalonline). The image can be pulled [from dockerhub](https://hub.docker.com/r/donachys/kubevalonline/).
+The source code is hosted on [github](https://github.com/donachys/kubevalonline). The image can be pulled from [dockerhub](https://hub.docker.com/r/donachys/kubevalonline/).
 
 [Travis CI](https://travis-ci.org/donachys/kubevalonline) and [coveralls](https://coveralls.io/github/donachys/kubevalonline?branch=master) handle the build and code coverage.
+[![Build Status](https://travis-ci.org/donachys/kubevalonline.svg?branch=master)](https://travis-ci.org/donachys/kubevalonline) [![Coverage Status](https://coveralls.io/repos/github/donachys/kubevalonline/badge.svg?branch=master)](https://coveralls.io/github/donachys/kubevalonline?branch=master)

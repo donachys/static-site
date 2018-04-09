@@ -1,7 +1,9 @@
 languageCode = "en-us"
-title = "Shaun Donachy"
-baseURL = "http://localhost:1313/"
+title = "SD"
+copyright = "Shaun Donachy"
+baseURL = "http://notlocalhost/" #
 theme = "dopetrope"
+enableRobotsTXT = true
 
 [params.projects]
     title = "Projects"

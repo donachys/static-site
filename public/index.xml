@@ -53,5 +53,15 @@ Our idea If we can do object detection with a Raspberry Pi camera and use that s
 The platform First, we needed to get the platform ready, and the platform was our vehicle-mounted RPi.</description>
     </item>
     
+    <item>
+      <title>Dragenvoy Ludum Dare 26</title>
+      <link>https://shaundonachy.com/projects/dragenvoy-ld-26/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://shaundonachy.com/projects/dragenvoy-ld-26/</guid>
+      <description>I&amp;rsquo;m a fan of game jams and indie game development. One of the game jams I participated in was Ludum Dare 26 with the theme of minimalism. I was reminded of one of the most minimal games &amp;ldquo;snake&amp;rdquo; which folks used to play on the tiny lcd screens of their ancient mobile dumb-phones.
+Tools I used Unity and C# to develop the game over a weekend. The concept was to build a snake game but use physics to determine the movement of the snake.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -8,7 +8,7 @@ slug = "static-site-with-hugo"
 author = "Shaun Donachy"
 draft = false
 hidesidebar = true
-tags = ["hugo", "Go", "golang", ]
+tags = ["hugo", "Go", "golang"]
 +++
 ### Building a website with Hugo
 

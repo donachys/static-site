@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+    <title>SD</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    
+        
+        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
+    
+    
+    <meta name="generator" content="Hugo 0.39-DEV" />
+    
+</head>
+	<body class="homepage">
+        
+	<div id="page-wrapper">
+
+		
+		<div id="header-wrapper">
+			<div id="header">
+
+				
+<h1><a href="https://shaundonachy.com/">SD</a></h1>
+				
+<nav id="nav">
+    <ul>
+        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
+        
+		
+        <li>
+            <a href="https://shaundonachy.com/#projects">Projects</a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="https://shaundonachy.com/blog">Blog</a>
+            <ul>
+                
+                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                
+                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
+                
+                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
+                
+            </ul>
+        </li>
+        
+        
+		
+        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+    </ul>
+</nav>
+
+			</div>
+		</div>
+
+		
+		<div id="main-wrapper">
+			<div class="container">
+				
+				
+<article class="box post">
+    <a href="#" class="image featured"><img src="https://shaundonachy.com/images/cannon-go.png" alt="" /></a>
+    <header>
+        <h2>Cannon-Go Battle</h2>
+        
+        <p>Posted 27 Dec 2018</p>
+        
+    </header>
+    
+
+<p>Designing games is immensely good fun. It&rsquo;s so much fun that I tend to bite off more than I can chew. Previously, I had chatted with <a href="https://github.com/rmbreak">@rmbreak</a> about making a clone of the classic <a href="https://en.wikipedia.org/wiki/Gorillas_(video_game)">gorillas</a> game where players throw explosive bananas at each other. One of the main features being that it is relatively simplistic and we might be able to get to a playable state quickly. Although that project has yet to materialize, the motivations for keeping things simple stuck around.</p>
+
+<p>As a bit of history and some context; I&rsquo;ve always wanted to make network-multiplayer games yet the prospect of building it seemed daunting. The build versus buy scenario comes up all the time in software development, and a memorable prior attempt at creating a multiplayer game was completely derailed after testing an off-the-shelf solution from Unity3d to find that it did not support the kind of multiplayer game I had in mind. The possibility of implementing the game server from scratch with no prior knowledge of remote procedure call networking seemed too tall of an order at the time.</p>
+
+<h3 id="game-design">Game Design</h3>
+
+<p>The design is deliberately simple to keep the implementation manageable. It&rsquo;s a 2-player game where each player has a castle randomly placed on a field and a cannon randomly placed within the castle walls. Inspiration came from the <a href="https://en.wikipedia.org/wiki/Gorillas_(video_game)">gorillas</a> game and the board game of <a href="https://en.wikipedia.org/wiki/Battleship_(game)">battleship</a>. Each player will be able to see the location of their opponent&rsquo;s castle as well as their own. But, the precise location of the cannon within their opponent&rsquo;s castle will remain hidden. The player&rsquo;s objective is to hit the opponent&rsquo;s cannon location. This may take many attempts because the player doesn&rsquo;t know exactly where their opponent&rsquo;s cannon is located. Each player&rsquo;s cannon may shoot once every three seconds and they modify their shot attempts by adjusting three parameters: power, rotation, and pitch.</p>
+
+<h3 id="server">Server</h3>
+
+<p>I was interested in using a client-server architecture where the server maintains game state and validates client requests. The server was written in Go utilizing <a href="https://grpc.io">GRPC</a> for communication between client and server. Implementing the GRPC server in golang is a relatively smooth experience. I got in some more solid practice with channels and found them to be a fantastic primitive for managing the complexity of concurrent programming, particularly for bi-directional streaming.</p>
+
+<h3 id="client">Client</h3>
+
+<p>To simplify the client, and to experiment with the feasibility of terminal games I used the <a href="https://github.com/JoelOtter/termloop">termloop</a> library based on <a href="https://github.com/nsf/termbox-go">termbox</a> to implement the initial client as a terminal app. I&rsquo;m grateful for the availability of termloop and termbox as it simplified the implementation and made it easy for me to keep everything in golang and in one repository.</p>
+
+<h3 id="grpc">GRPC</h3>
+
+<p>The first step of setting up a game is implemented as a unary RPC call. Clients send a request to the server to signal the intent to queue for a game. The server is then responsible for matchmaking and game creation.  Once a game begins each player can send requests to fire their cannon independently, and their opponents must be notified immediately. Using the bidirectional streaming functionality built into GRPC therefore makes sense, and provides an opportunity for me to learn more about it!</p>
+
+<h3 id="challenges">Challenges</h3>
+
+<h5 id="client-terminal-ui">Client Terminal UI</h5>
+
+<p>When building the client UI it quickly became clear that there were some UX issues. It was difficult to inform the player that their shot was off of the screen or that their shot did not fire because of the 3 second cooldown gated by the server. Implementing an animation for the player&rsquo;s shots would help alleviate the confusion. The server would need to be modified to send a remaining cooldown update to the client so the client could display it to the player. The number of input keys that termloop supports is somewhat limiting. I needed two inputs per firing parameter for a total of six, and then a fire command. I used up the arrow keys and spacebar and then I had to use a modifier key with the &lsquo;O&rsquo; and &lsquo;P&rsquo; characters for the final set of commands. Building UI&rsquo;s that work on a variety of resolutions is always a challenge, and the issue of handling different terminal window sizes remains to be solved on the terminal client. Termloop does provide the ability to specify an offset which would permit you to move the camera around. That would of course require additional keyboard inputs to implement.</p>
+
+<h5 id="grpc-1">GRPC</h5>
+
+<p>One confusing issue I ran into occurred when adding metadata to client requests. The error message I received did not directly inform me of the problem.</p>
+
+<p><code>failed.rpc error: code = Internal desc = stream terminated by RST_STREAM with error code: PROTOCOL_ERROR</code></p>
+
+<p>The issue turned out to be that when requesting input from the user a newline character was present at the end of the string. Newline characters cause this protocol error when added to metadata. So, the fix was simply to strip the newline character before adding it to metadata. I believe this issue still exists when targeting Windows.</p>
+
+<p>Most of the time I have had no issues when using bi-directional streaming to play the game. On one or two occasions, though, I&rsquo;ve had some unexpected interruptions. I have not yet determined how to properly maintain a long-lived streaming connection. I suspect I will need to implement a mechanism for retries and re-establishing a connection to a game. As of now the server just informs the clients when their opponent has disconnected.</p>
+
+<h5 id="matchmaking">Matchmaking</h5>
+
+<p>The matchmaking is extremely naive as I wanted to keep things simple. But I find the problem of creating matches to be fascinating. The various aspects of how to match players up so that the game experience is a positive one while also dealing with the technical implementation challenges could prove very interesting. I hope to revisit this problem in the future!</p>
+
+<h3 id="gitlab-ci-cd">Gitlab CI/CD</h3>
+
+<p>This was the first project where I used Gitlab&rsquo;s solution for automated builds. After a bit of ramping up on their build documentation I quickly got a working <code>.gitlab-ci.yml</code> working for an automated linux target test and build. I was able to use one of gitlab&rsquo;s provided regex&rsquo;s for golang to pick up the code-coverage value from the build output, but alas, it only reads the code-coverage value of the last module. Fortunately for me that module is 100% covered! 😅 It&rsquo;s also great that their system automatically keeps downloadable build artifacts around for you.</p>
+
+<h3 id="outro">Outro</h3>
+
+<p>I learned a lot and had a lot of fun working on this game so far. It definitely seems to me that GRPC is a viable communications tool for games, though I will need to figure out techniques to deal with interruptions to the stream. Terminal UI for games will continue to be a challenge I think. Even a basic game such as this one comes with challenges to achieve a reasonable user experience.</p>
+
+<p>Since this game does not require a full simulation to run on the server and the client-server communication is relatively sparse, I don&rsquo;t see any issues with using a garbage-collected language like Go and the tcp-based GRPC protocol has worked well so far! I think it warrants further investigation.</p>
+
+</article>
+
+				
+			</div>
+		</div>
+
+		
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div id="contact" class="row">
+            <div class="8u 12u(mobile)">
+    <section>
+        
+        <header>
+            <h2>Recent Posts</h2>
+        </header>
+        
+        <ul class="dates">
+            
+            <li>
+                <span class="date">Apr <strong>23</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <p>Ludum Dare 41 Compo Entry</p>
+            </li>
+            
+            <li>
+                <span class="date">Apr <strong> 7</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <p>My experience so far with Hugo!</p>
+            </li>
+            
+            <li>
+                <span class="date">Apr <strong>23</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
+                <p></p>
+            </li>
+            
+        </ul>
+    </section>
+</div>
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>Get in touch</h2>
+                    </header>
+                    <ul class="about">
+    
+        <p>I enjoy crafting new tools and tech, games, and enriching lives. In addition to software I like to practice leatherworking.</p>
+    
+</ul>
+                    <ul class="social">
+    
+    
+    
+    
+    
+    <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
+    
+    
+    
+    <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
+    
+    
+</ul>
+                    <ul class="contact">
+    
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
+    <li>
+        <h3>Address</h3>
+        <p>
+            
+             San Francisco, CA
+            
+        </p>
+    </li>
+    
+    
+</ul>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+    <div class="12u">
+
+        
+            <div id="copyright">
+                <ul class="links">
+                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                </ul>
+            </div>
+
+    </div>
+</div>
+    </section>
+</div>
+
+	</div>
+
+	
+<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/util.js"></script>
+
+<script src="https://shaundonachy.com/assets/js/main.js"></script>
+
+    
+    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

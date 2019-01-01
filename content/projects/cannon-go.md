@@ -48,9 +48,11 @@ Most of the time I have had no issues when using bi-directional streaming to pla
 The matchmaking is extremely naive as I wanted to keep things simple. But I find the problem of creating matches to be fascinating. The various aspects of how to match players up so that the game experience is a positive one while also dealing with the technical implementation challenges could prove very interesting. I hope to revisit this problem in the future!
 
 ### Gitlab CI/CD
-This was the first project where I used Gitlab's solution for automated builds. After a bit of ramping up on their build documentation I quickly got a working `.gitlab-ci.yml` working for an automated linux target test and build. I was able to use one of gitlab's provided regex's for golang to pick up the code-coverage value from the build output, but alas, it only reads the code-coverage value of the last module. Fortunately for me that module is 100% covered! 😅 It's also great that their system automatically keeps downloadable build artifacts around for you.
+This was the first project where I used Gitlab's solution for automated builds. After a bit of ramping up on their build documentation I quickly got a working `.gitlab-ci.yml` working for an automated linux target test and build. I was able to use one of gitlab's provided regex's for golang to pick up the code-coverage value from the build output, but alas, it only reads the code-coverage value of the last module. To fix this, I used the `go tool cover` command which will give a total statements covered output, and the regex `\(statements\)\s+\d+.\d+%` picked it up nicely. It's also great that gitlab can automatically keep downloadable build artifacts around for you.
 
 ### Outro
 I learned a lot and had a lot of fun working on this game so far. It definitely seems to me that GRPC is a viable communications tool for games, though I will need to figure out techniques to deal with interruptions to the stream. Terminal UI for games will continue to be a challenge I think. Even a basic game such as this one comes with challenges to achieve a reasonable user experience.
 
 Since this game does not require a full simulation to run on the server and the client-server communication is relatively sparse, I don't see any issues with using a garbage-collected language like Go and the tcp-based GRPC protocol has worked well so far! I think it warrants further investigation.
+
+The source code is hosted [on gitlab](https://gitlab.com/donachys/cannon-go).

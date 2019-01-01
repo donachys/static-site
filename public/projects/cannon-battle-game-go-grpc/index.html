@@ -116,13 +116,15 @@
 
 <h3 id="gitlab-ci-cd">Gitlab CI/CD</h3>
 
-<p>This was the first project where I used Gitlab&rsquo;s solution for automated builds. After a bit of ramping up on their build documentation I quickly got a working <code>.gitlab-ci.yml</code> working for an automated linux target test and build. I was able to use one of gitlab&rsquo;s provided regex&rsquo;s for golang to pick up the code-coverage value from the build output, but alas, it only reads the code-coverage value of the last module. Fortunately for me that module is 100% covered! 😅 It&rsquo;s also great that their system automatically keeps downloadable build artifacts around for you.</p>
+<p>This was the first project where I used Gitlab&rsquo;s solution for automated builds. After a bit of ramping up on their build documentation I quickly got a working <code>.gitlab-ci.yml</code> working for an automated linux target test and build. I was able to use one of gitlab&rsquo;s provided regex&rsquo;s for golang to pick up the code-coverage value from the build output, but alas, it only reads the code-coverage value of the last module. To fix this, I used the <code>go tool cover</code> command which will give a total statements covered output, and the regex <code>\(statements\)\s+\d+.\d+%</code> picked it up nicely. It&rsquo;s also great that gitlab can automatically keep downloadable build artifacts around for you.</p>
 
 <h3 id="outro">Outro</h3>
 
 <p>I learned a lot and had a lot of fun working on this game so far. It definitely seems to me that GRPC is a viable communications tool for games, though I will need to figure out techniques to deal with interruptions to the stream. Terminal UI for games will continue to be a challenge I think. Even a basic game such as this one comes with challenges to achieve a reasonable user experience.</p>
 
 <p>Since this game does not require a full simulation to run on the server and the client-server communication is relatively sparse, I don&rsquo;t see any issues with using a garbage-collected language like Go and the tcp-based GRPC protocol has worked well so far! I think it warrants further investigation.</p>
+
+<p>The source code is hosted <a href="https://gitlab.com/donachys/cannon-go">on gitlab</a>.</p>
 
 </article>
 
@@ -185,6 +187,9 @@
     
     
     <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
+    
+    
+    <li><a class="icon fa-gitlab" href="https://gitlab.com/donachys"><span class="label">GitLab</span></a></li>
     
     
 </ul>

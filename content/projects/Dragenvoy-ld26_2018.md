@@ -1,6 +1,6 @@
 +++
 date = "2018-04-15T00:00:00"
-description = "Dragenvoy - Remix 2018"
+description = "Dragenvoy - Remixed for 2018 with Unity v2017.4.1"
 thumbnail = "images/dragenvoy_ld26_2018.png"
 image = "images/dragenvoy_ld26_2018.png"
 title = "Dragenvoy - Remix 2018"

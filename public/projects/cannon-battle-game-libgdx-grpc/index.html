@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+    <title>SD</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    
+        
+        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
+    
+    
+    <meta name="generator" content="Hugo 0.39-DEV" />
+    
+</head>
+	<body class="homepage">
+        
+	<div id="page-wrapper">
+
+		
+		<div id="header-wrapper">
+			<div id="header">
+
+				
+<h1><a href="https://shaundonachy.com/">SD</a></h1>
+				
+<nav id="nav">
+    <ul>
+        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
+        
+		
+        <li>
+            <a href="https://shaundonachy.com/#projects">Projects</a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="https://shaundonachy.com/blog">Blog</a>
+            <ul>
+                
+                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                
+                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
+                
+                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
+                
+            </ul>
+        </li>
+        
+        
+		
+        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+    </ul>
+</nav>
+
+			</div>
+		</div>
+
+		
+		<div id="main-wrapper">
+			<div class="container">
+				
+				
+<article class="box post">
+    <a href="#" class="image featured"><img src="https://shaundonachy.com/images/cannongdx.png" alt="" /></a>
+    <header>
+        <h2>Cannon-GDX Battle</h2>
+        
+        <p>Posted 1 Jan 2019</p>
+        
+    </header>
+    
+
+<p>The <a href="https://libgdx.badlogicgames.com/index.html">libGDX</a> project hosted <a href="https://github.com/libgdx/libgdx/">on github</a> has come a long way since I first encountered it during a gamejam in 2013. Multiple platforms including mobile and desktop are supported and the feature set is great! I wanted to try it out and see if it might be a good choice for me to use during game jams and future game projects. Since Java is a fully-supported language for <a href="https://grpc.io">GRPC</a>, I could use libGDX and GRPC to build a client for <a href="https://shaundonachy.com/projects/cannon-battle-game-go-grpc/">cannon-go</a>.</p>
+
+<h3 id="getting-started">Getting started</h3>
+
+<p>I took my first steps with libGDX and used the handy <a href="https://libgdx.badlogicgames.com/documentation/gettingstarted/Creating%20Projects.html">project setup tool</a> and started bringing in some of the example code from <a href="http://libgdx.info/">libgdx.info</a>. (<a href="https://github.com/libgdx/libgdx/wiki/External-tutorials">External tutorials</a> are also a great resource I encountered later.) After I was confident that I could implement the features for a GUI to support Cannon-GDX I just needed to see about adding GRPC support to the project. Although libGDX provides gradle scaffolding, and the GRPC documentation also has a gradle build example, they had different approaches. The libGDX starting gradle setup supports building to multiple targets, a nice feature. The GRPC example did not have such a setup, so being completely new to gradle I had some difficulty integrating GRPC into the project. After a <em>lot</em> of trial and error and juggling different versions of gradle plugins and protobuf plugins I finally got to a gradle setup that would compile the <code>.proto</code> files and put the generated output on the classpath. I&rsquo;m certain that gradle wouldn&rsquo;t be so mystical if I was more familiar with it, but is significantly more complex than the couple lines in a makefile that the <a href="https://gitlab.com/donachys/cannon-go">cannon-go</a> project uses. Alright! so I got my feet wet and I know how to include GRPC classes, time to create the base project and get started!</p>
+
+<h3 id="game-setup-screen">Game setup screen</h3>
+
+<p>The first step a player must complete is putting in their name and connecting to the game server. For this step a unary synchronous GRPC call is all that is needed. Not too much trouble setting that up, but it quickly became clear that GRPC in java is very different than using GRPC with go. The builder pattern is used to construct all of the classes which are derived from the <code>.proto</code> file; not too bad once I became familiar with it. With that setup and working the next step is moving to a pre-game screen.</p>
+
+<h3 id="pre-game-screen">Pre-game screen</h3>
+
+<p>This screen just has a button for the player to indicate they are ready to start the game. But to do so, we have to get the bi-directional streaming connection set up. This part started to get tricky as I needed to become familiar with how GRPC and java handle asynchronous calls and concurrency. The client sends and receives data asynchronously and a lock is used to prevent concurrent access to some of the game state information.</p>
+
+<h3 id="game-screen">Game screen</h3>
+
+<p>Now that the bi-directional stream is established, the player&rsquo;s have both indicated they are ready, the game can begin!
+One challenge I ran into was how to deal with creating OpenGL textures based on an asynchronous receive from the server while the UI thread was the only thread with access to the OpenGL context. When the game is created many of the textures are already loaded and we just signal that they may be displayed and adjust the gamestate for where to display them. A big improvement over the terminal client comes from being able to see which direction your cannon is rotated and watch your opponent&rsquo;s shots come in. The parameter ranges needed to be restricted to more reasonable values so the slider inputs would permit the kind of fine tuning needed to adjust the cannon&rsquo;s aim.</p>
+
+<h3 id="important-libgdx-concepts">Important libGDX concepts</h3>
+
+<p>As I developed the game client there were two important concepts I encountered: scene2d UI tables and GDX screens. Screens share some similarities with scenes in the <a href="https://unity3d.com">Unity Engine</a> and the UI tables come in very handy for laying out UI elements on a screen that can vary in aspect ratio and resolution. Getting the tables to perform exactly how I would like is still a work-in-progress. It took some trial and error to get the game-setup screen laid out similar to what I had in mind, but I think the result is worth the effort in understanding the layout system.</p>
+
+<h3 id="iteration">Iteration</h3>
+
+<p>My first complete implementation used placeholder assets and functioned much like the terminal client. The GDX client had the same poor UX of the terminal client. This was a good opportunity to learn how libGDX handles animation. I implemented some animations to show the cannonballs trajectory and landing point. Since showing the origination point of the opposing player&rsquo;s shots would give away their location, enemy shots just drop straight down from above. The inability to see which direction your cannon is facing was fixed by having the cannon sprite rotate around to point in the direction it&rsquo;s aiming. These two improvements made the UX much better.</p>
+
+<p>I then replaced the default skin that I was using from tutorials with the holo skin; one of the freely available skins available <a href="https://github.com/czyzby/gdx-skins">here</a>. The skin system is a nice feature, it made swapping out the stylings of the UI elements fairly straight forward.</p>
+
+<p>One final improvement over the terminal UI is the restriction of the parameter ranges to ease the use of the UI sliders. The rotation is restricted to a 90 degree range aimed at the center of the opponent&rsquo;s base. The power and pitch ranges are restricted to static values that permit the player to target the opposing base without excess.</p>
+
+<h3 id="ready-to-play">Ready to play</h3>
+
+<p>Now it&rsquo;s possible to play with either of the two clients! One player can use the terminal client in the <a href="https://shaundonachy.com/projects/cannon-battle-game-go-grpc/">cannon-go</a> repository and the other can use the libGDX GUI client! I updated the placeholder game assets to use textures that I created with Illustrator and Photoshop. Utilizing GRPC enabled the clients to communicate with the server in an indistinguishable fashion from the server&rsquo;s perspective. Implementing this second client helped improve the server and brought some new and interesting challenges and opportunities for improvement.</p>
+
+<p>Two areas I&rsquo;m interested in exploring is making a computer-controlled player (a bot) for the players to play against. It will require some careful balancing between being too good and an interesting challenge. The second area I&rsquo;m curious about is improving the matchmaking, and moving it to a separate grpc service that the game server can communicate with.
+I&rsquo;ve enjoyed the chance to use some new tools and learn more about libGDX while having some fun building a new client. I&rsquo;m pleased with the result! You can see an animated demo of the gameplay below or check it out on gitlab!</p>
+
+<div style="text-align:center;"><img src="../../images/cannongdxdemo.gif"></img></div>
+
+<p>The source code is hosted <a href="https://gitlab.com/donachys/cannon-gdx">on gitlab</a></p>
+
+</article>
+
+				
+			</div>
+		</div>
+
+		
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div id="contact" class="row">
+            <div class="8u 12u(mobile)">
+    <section>
+        
+        <header>
+            <h2>Recent Posts</h2>
+        </header>
+        
+        <ul class="dates">
+            
+            <li>
+                <span class="date">Apr <strong>23</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <p>Ludum Dare 41 Compo Entry</p>
+            </li>
+            
+            <li>
+                <span class="date">Apr <strong> 7</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <p>My experience so far with Hugo!</p>
+            </li>
+            
+            <li>
+                <span class="date">Apr <strong>23</strong></span>
+                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
+                <p></p>
+            </li>
+            
+        </ul>
+    </section>
+</div>
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>Get in touch</h2>
+                    </header>
+                    <ul class="about">
+    
+        <p>I enjoy crafting new tools and tech, games, and enriching lives. In addition to software I like to practice leatherworking.</p>
+    
+</ul>
+                    <ul class="social">
+    
+    
+    
+    
+    
+    <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
+    
+    
+    
+    <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
+    
+    
+    <li><a class="icon fa-gitlab" href="https://gitlab.com/donachys"><span class="label">GitLab</span></a></li>
+    
+    
+</ul>
+                    <ul class="contact">
+    
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
+    <li>
+        <h3>Address</h3>
+        <p>
+            
+             San Francisco, CA
+            
+        </p>
+    </li>
+    
+    
+</ul>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+    <div class="12u">
+
+        
+            <div id="copyright">
+                <ul class="links">
+                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                </ul>
+            </div>
+
+    </div>
+</div>
+    </section>
+</div>
+
+	</div>
+
+	
+<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
+<script src="https://shaundonachy.com/assets/js/util.js"></script>
+
+<script src="https://shaundonachy.com/assets/js/main.js"></script>
+
+    
+    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

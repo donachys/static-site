@@ -1,6 +1,6 @@
 +++
 date = "2014-09-20T00:00:00"
-description = "Drive an RC car with a bluetooth controller and a Raspberry Pi!"
+description = "Drive an RC car with a bluetooth controller and a Raspberry Pi"
 thumbnail = "images/automaton_pi.jpg"
 image = "images/automaton_pi.jpg"
 title = "Automaton Pi"

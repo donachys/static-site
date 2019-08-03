@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your Life Is Currency on SD</title>
+    <link>https://shaundonachy.com/tags/your-life-is-currency/</link>
+    <description>Recent content in Your Life Is Currency on SD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Shaun Donachy</copyright>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shaundonachy.com/tags/your-life-is-currency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Glampire Baby Herder!</title>
+      <link>https://shaundonachy.com/blog/glampire-baby-herder/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shaundonachy.com/blog/glampire-baby-herder/</guid>
+      <description>Ludum Dare 44! Two more Ludum Dare gamejams passed which I was unable to participate in. When the third one rolled around and I realized another year had gone by I thought about entering but wasn&amp;rsquo;t very serious about it. That&amp;rsquo;s when @mackcam got in touch about working together for the gamejam. Heck yea, I was in for LD44! I figured this time I would keep a pretty casual attitude about completing our submission.</description>
+    </item>
+    
+  </channel>
+</rss>

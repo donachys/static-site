@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Sun, 15 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://shaundonachy.com/tags/2d/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Glampire Baby Herder!</title>
+      <link>https://shaundonachy.com/blog/glampire-baby-herder/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shaundonachy.com/blog/glampire-baby-herder/</guid>
+      <description>Ludum Dare 44! Two more Ludum Dare gamejams passed which I was unable to participate in. When the third one rolled around and I realized another year had gone by I thought about entering but wasn&amp;rsquo;t very serious about it. That&amp;rsquo;s when @mackcam got in touch about working together for the gamejam. Heck yea, I was in for LD44! I figured this time I would keep a pretty casual attitude about completing our submission.</description>
+    </item>
     
     <item>
       <title>Dragenvoy - Remix 2018</title>

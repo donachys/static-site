@@ -1654,7 +1654,7 @@
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
+		background: rgb(23, 104, 138) url("../../images/dm3.svg");
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;

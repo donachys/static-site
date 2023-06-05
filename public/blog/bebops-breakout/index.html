@@ -1,22 +1,14 @@
 <!DOCTYPE HTML>
 
-<html>
-	<head>
+<html><head>
     <title>SD</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    <link rel="stylesheet" href="http://notlocalhost/assets/css/main.css" />
     
-        
-        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
-    
-    
-    <meta name="generator" content="Hugo 0.39-DEV" />
-    
-</head>
-	<body class="homepage">
-        
+    </head>
+<body class="homepage">
 	<div id="page-wrapper">
 
 		
@@ -24,39 +16,26 @@
 			<div id="header">
 
 				
-<h1><a href="https://shaundonachy.com/">SD</a></h1>
+<h1><a href="http://notlocalhost/">SD</a></h1>
 				
 <nav id="nav">
     <ul>
-        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
-        
-		
+        <li class="current"><a href="http://notlocalhost/">Home</a></li>
         <li>
-            <a href="https://shaundonachy.com/#projects">Projects</a>
+            <a href="http://notlocalhost/#projects">Projects</a>
         </li>
-        
-        
-        
         <li>
-            <a href="https://shaundonachy.com/blog">Blog</a>
+            <a href="http://notlocalhost/blog">Blog</a>
             <ul>
-                
-                <li><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
-                
+                <li><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
+                <li><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                <li><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
             </ul>
         </li>
-        
-        
-		
-        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+        <li><a href="http://notlocalhost/#contact">Contact</a></li>
     </ul>
 </nav>
+
 
 			</div>
 		</div>
@@ -67,101 +46,58 @@
 				
 				
 <article class="box post">
-    <a href="#" class="image featured"><img src="https://shaundonachy.com/bebopsbreakout/bebopsbreakout_cover.png" alt="" /></a>
+    <a href="#" class="image featured"><img src="http://notlocalhost/bebopsbreakout/bebopsbreakout_cover.png" alt="" /></a>
     <header>
         <h2>Bebop&#39;s Breakout!</h2>
         
         <p>Posted 23 Apr 2018</p>
         
     </header>
-    
-
-<h3 id="building-a-game-in-72-hours">Building a game in 72 hours</h3>
-
+    <h3 id="building-a-game-in-72-hours">Building a game in 72 hours</h3>
 <p>A couple weeks ago after realizing (in shock) that it had been 5 years since my last GameJam, I decided to commit to <a href="https://ldjam.com/events/ludum-dare/41/">LD41</a>. For the uninitiated, GameJams are like hackathons for video games where you build a video game over the course of a weekend. <a href="https://ldjam.com/about">Ludum Dare</a> is one of the largest GameJams and it is run 3 times per year by the awesome <a href="https://ldjam.com/users/pov">@pov Mike</a>. I successfully recruited two brave first-time game-jammers willing to sacrifice many hours of their weekend to join me on this epic journey: <a href="https://ldjam.com/users/soylalluvia">@soylalluvia</a> <a href="https://ldjam.com/users/alexis-vana">@alexis-vana</a>.</p>
-
 <h3 id="prep-work">Prep work</h3>
-
 <p>Well it had been 5 years since I had opened Unity3D; so I knew lots of things would be different. Fortunately, though, many things were still the same. I just needed to jog my memory a bit on all the little gotchas Unity throws at you. I set out to update my 5-year-old GameJam game <a href="https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/">dragenvoy</a> since it no longer builds in Unity 5+. You can play the remixed version <a href="https://shaundonachy.com/dragenvoy2018/">here</a>. There were many improvements made to the 2D system which I knew we would be able to leverage for LD41.</p>
-
 <p>In addition to that <a href="https://ldjam.com/users/soylalluvia">@soylalluvia</a> did a little intro on point-and-click adventure games which I&rsquo;m pretty sure I had not played since King&rsquo;s Quest V. I was also interested in a story-driven type of game, so it seemed like a good genre to pursue for a GameJam game.</p>
-
 <h3 id="the-theme">The Theme!</h3>
-
 <p>I participated as the pool of themes narrowed from over 3000 down to the final pool of 16 themes.
 Here&rsquo;s what my final vote looked like:
-<img src="/bebopsbreakout/final_themes_ld41.png" alt="final_vote" /></p>
-
+<img src="/bebopsbreakout/final_themes_ld41.png" alt="final_vote"></p>
 <p>Discussing these during the voting with my teammates and other folks, I predicted that the theme of &ldquo;Combine 2 incompatible genres&rdquo; was likely to win. It just seemed like so many hilarious combinations would be created if that were the theme. We eagerly awaited the announcement of the theme on Friday evening. We were inspired by the great keynote if you want to check it out:</p>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TjuZvDYqcRs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>Turns out my prediction was right, the theme was:
 &ldquo;Combine 2 incompatible genres (e.g. turn based racing)&rdquo;</p>
-
 <p>As pointed out by the <a href="https://ldjam.com/events/ludum-dare/41/$73264/ld41s-theme-combine-2-incompatible-genres">news post</a>, the theme did not specify &ldquo;Video Game&rdquo; genres, but just genres in general, so this could be music genres, book genres, etc. I was excited for what we could come up with. We had some hilarious ideas that were kind of all-over-the-place. Admittedly, I was biased towards combining incompatible video game genres.</p>
-
 <h3 id="selecting-the-premise-and-designing-the-game">Selecting the premise and Designing the game</h3>
-
 <p>It helped us to narrow it down to one game genre that we were already excited about: point-and-click adventure games! So we started there and we thought about what such a game combined with other genres would be like. We also knew we wanted to stick with 2D as none of the team members had any experience with 3D tools. We hit on the idea of a text-based rpg/adventure game mixed with the point-and-click adventure game and everyone found the idea hilarious in a <a href="http://foddy.net/Athletics.html?webgl=true">QWOP</a>-like way. Inflicting pain on the players in a ridiculous way got us all laughing and we were encouraged by our honorary team member Richimus. We brainstormed on what the interface would look like and what kinds of commands we would permit. We laughed a lot about making the commands and any names or interactables in the game as long as possible. A command like &ldquo;give&rdquo; would become &ldquo;bequeath&rdquo; and we could incorporate extremely long words like sesquipedalianism itself as the tendency to use long words.</p>
-
 <h3 id="story">Story</h3>
-
 <p><a href="https://ldjam.com/users/soylalluvia">@soylalluvia</a> was the driver of the development of the story. The <a href="http://coachella.com">Coachella</a> festival was happening near LA this past weekend, and good &lsquo;ol Beyonce was performing there. Wouldn&rsquo;t it be ridiculous if there was a cat at such a music festival? 🤔 Not just any cat&hellip; but a magical floating cat. Stuck there by the will of their human. Wouldn&rsquo;t you know that magic cats simply abhor pop music, but are big fans of the completely incompatible jazz genre. Big thanks to <a href="https://ldjam.com/users/soylalluvia">@soylalluvia</a> for designing the game and driving the story.</p>
-
 <h3 id="adventure-games">Adventure games</h3>
-
 <p>I had never attempted to implement an adventure game before. Completely re-learning Unity and coming up with a system to implement an adventure game turned out to be quite a challenge. Unity offers some tutorials, one of which is an adventure game tutorial. I took some cues from their system and implemented a similar &ldquo;Conditions&rdquo; and &ldquo;Reactions&rdquo; system along with an &ldquo;Inventory&rdquo; system. The final version of the framework could be greatly improved in many dimensions but I am happiest with the fact that there are few major game-breaking bugs that would allow players to perform unintended actions or get themselves completely stuck.</p>
-
 <p>It would be interesting to develop this concept further, possibly in another game engine entirely, or by integrating with the Unity editor and enabling more types of conditions and reactions, in a greater variety of scenarios.</p>
-
 <h3 id="submission-time">Submission time</h3>
-
 <p>We managed to find some time just before the deadline to work in some more voices and sound effects. I think these went a long way to improving the functionality of the game and helped to explain the story. The voiceovers were a lot of fun and turned out reasonably well. But why does Bebop the cat have a scottish accent? who knows&hellip;
 The final 20 minutes before submissions closed were extremely hectic. We managed to get the build on <a href="https://donshinski.itch.io/bebops-breakout">itch.io</a>, source on <a href="https://github.com/donachys/bebopsbreakout">GitHub</a> and the description written and posted on <a href="https://ldjam.com/events/ludum-dare/41/bebops-breakout">ldjam.com</a> along with screenshots. Phew! that was intense. Afterwards I was completely drained mentally. I feel that my brain was barely working at that point!</p>
-
 <h3 id="retro">Retro</h3>
-
 <p>It&rsquo;s always good to take a look back at the experience. I was reminded once again how frustrating developing with Unity can be. We tried out the (new to me) feature for collaboration on a project. When it worked, it was fantastic. But when it doesn&rsquo;t work 100% you can&rsquo;t rely on it, and that creates frustration and time spent working around it is lost. I would really enjoy having a better alternative that provides some of the great features Unity provides (cross-platform support, WebGL builds, built-in systems like physics, UI, and sprites&hellip; and many more) with a framework that was friendlier to programmers. I definitely underestimated how difficult it would be to have a framework for defining the interactions a player could perform, and also how defining those interactions would go. Maybe a better-planned framework could help there. Audacity performed admirably, but <a href="https://ldjam.com/users/soylalluvia">@soylalluvia</a> definitely had some gripes about the effiency of Adobe Edge Animate. Having never used it, itch.io turned out to be a good hosting site that made it simple to upload our game at crunch-time. I also have a non-embedded version you can play <a href="https://shaundonachy.com/bebopsbreakout/">here</a>. Try it out!</p>
-
 <h3 id="rating">Rating</h3>
-
 <p>Wow this is the fun part. So many great games. There were 2346 Games submitted for LD 26 and there were over 3000 submitted for LD 41. I will unfortunately never see them all, but the ones I have tried have all been fantastic. I&rsquo;ll have to keep practicing if I want to be able to keep up with them. Maybe I can try out some of the other final themes that didn&rsquo;t get selected! So, thanks to everyone for rating our game, thanks to my teammates for an awesome jam, and I can&rsquo;t wait for the next one. Cheers!</p>
-
 <h3 id="spoilers">Spoilers</h3>
-
-<p><div id="spoiler" style="display:none"></p>
-
-<h1>Bebops breakout walkthrough!</h1>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>After the intro, Bebop starts on the left side of the tent. You must use the on-screen keyboard to type the commands.</p>
-
-<p><pre><code>look</code></pre> and Bebop will complain about the music.</p>
-
-<p><pre><code>float left</code></pre> and Bebop gets scolded by his human.</p>
-
-<p><pre><code>float right</code></pre> and Bebop moves to the middle of the tent near his human.</p>
-
-<p><pre><code>grab</code></pre> to make London La Croix drop her kombucha.</p>
-
-<p><pre><code>float right</code></pre> to move Bebop to the right side of the tent near the suspicious table of pills.</p>
-
-<p><pre><code>grab</code></pre> to grab the pills and place them in Bebop&rsquo;s inventory.</p>
-
-<p><pre><code>float left</code></pre> and Bebop moves back to the center of the tent.</p>
-
-<p><pre><code>interact</code></pre> and Bebop identifies the kombucha. <pre><code>look kombucha</code></pre> also provides a clue here.</p>
-
-<p><pre><code>interact kombucha</code></pre> to put the pills in London La Croix&rsquo;s drink. She will then depart.</p>
-
-<p><pre><code>float left</code></pre> to go to the left side of the tent.</p>
-
-<p><pre><code>float left</code></pre> to exit the tent.</p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Congratulations, you&rsquo;re on your way to freedom floating past those crop-top kitty groupies. Cheers!</p>
-
-<p></div>
-<button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">show/hide</button></p>
+<!-- raw HTML omitted -->
 
 </article>
 
@@ -184,26 +120,20 @@ The final 20 minutes before submissions closed were extremely hectic. We managed
             
             <li>
                 <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
+                <h3><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
                 <p>Ludum Dare 44 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong>23</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <h3><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
                 <p>Ludum Dare 41 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong> 7</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <h3><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
                 <p>My experience so far with Hugo!</p>
-            </li>
-            
-            <li>
-                <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
-                <p></p>
             </li>
             
         </ul>
@@ -220,14 +150,7 @@ The final 20 minutes before submissions closed were extremely hectic. We managed
     
 </ul>
                     <ul class="social">
-    
-    
-    
-    
-    
     <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
-    
-    
     
     <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
     
@@ -236,6 +159,7 @@ The final 20 minutes before submissions closed were extremely hectic. We managed
     
     
 </ul>
+
                     <ul class="contact">
     
     <li>
@@ -254,7 +178,14 @@ The final 20 minutes before submissions closed were extremely hectic. We managed
     </li>
     
     
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
 </ul>
+
                 </section>
             </div>
         </div>
@@ -264,28 +195,29 @@ The final 20 minutes before submissions closed were extremely hectic. We managed
         
             <div id="copyright">
                 <ul class="links">
-                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                    <li>&copy; SD. All rights reserved.</li>
                 </ul>
             </div>
 
     </div>
 </div>
+
     </section>
 </div>
 
 	</div>
 
 	
-<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/util.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.min.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.dropotron.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel-viewport.min.js"></script>
+<script src="http://notlocalhost/assets/js/util.js"></script>
 
-<script src="https://shaundonachy.com/assets/js/main.js"></script>
+<script src="http://notlocalhost/assets/js/main.js"></script>
 
     
-    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script src="http://notlocalhost/assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 

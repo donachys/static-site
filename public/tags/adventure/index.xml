@@ -1,32 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Adventure on SD</title>
-    <link>https://shaundonachy.com/tags/adventure/</link>
-    <description>Recent content in Adventure on SD</description>
+    <title>adventure on SD</title>
+    <link>http://notlocalhost/tags/adventure/</link>
+    <description>Recent content in adventure on SD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://shaundonachy.com/tags/adventure/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://notlocalhost/tags/adventure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Glampire Baby Herder!</title>
-      <link>https://shaundonachy.com/blog/glampire-baby-herder/</link>
+      <link>http://notlocalhost/blog/glampire-baby-herder/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/glampire-baby-herder/</guid>
+      <guid>http://notlocalhost/blog/glampire-baby-herder/</guid>
       <description>Ludum Dare 44! Two more Ludum Dare gamejams passed which I was unable to participate in. When the third one rolled around and I realized another year had gone by I thought about entering but wasn&amp;rsquo;t very serious about it. That&amp;rsquo;s when @mackcam got in touch about working together for the gamejam. Heck yea, I was in for LD44! I figured this time I would keep a pretty casual attitude about completing our submission.</description>
     </item>
     
     <item>
       <title>Bebop&#39;s Breakout!</title>
-      <link>https://shaundonachy.com/blog/bebops-breakout/</link>
+      <link>http://notlocalhost/blog/bebops-breakout/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/bebops-breakout/</guid>
+      <guid>http://notlocalhost/blog/bebops-breakout/</guid>
       <description>Building a game in 72 hours A couple weeks ago after realizing (in shock) that it had been 5 years since my last GameJam, I decided to commit to LD41. For the uninitiated, GameJams are like hackathons for video games where you build a video game over the course of a weekend. Ludum Dare is one of the largest GameJams and it is run 3 times per year by the awesome @pov Mike.</description>
     </item>
     

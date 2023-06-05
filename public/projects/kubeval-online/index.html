@@ -1,22 +1,14 @@
 <!DOCTYPE HTML>
 
-<html>
-	<head>
+<html><head>
     <title>SD</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    <link rel="stylesheet" href="http://notlocalhost/assets/css/main.css" />
     
-        
-        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
-    
-    
-    <meta name="generator" content="Hugo 0.39-DEV" />
-    
-</head>
-	<body class="homepage">
-        
+    </head>
+<body class="homepage">
 	<div id="page-wrapper">
 
 		
@@ -24,39 +16,26 @@
 			<div id="header">
 
 				
-<h1><a href="https://shaundonachy.com/">SD</a></h1>
+<h1><a href="http://notlocalhost/">SD</a></h1>
 				
 <nav id="nav">
     <ul>
-        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
-        
-		
+        <li class="current"><a href="http://notlocalhost/">Home</a></li>
         <li>
-            <a href="https://shaundonachy.com/#projects">Projects</a>
+            <a href="http://notlocalhost/#projects">Projects</a>
         </li>
-        
-        
-        
         <li>
-            <a href="https://shaundonachy.com/blog">Blog</a>
+            <a href="http://notlocalhost/blog">Blog</a>
             <ul>
-                
-                <li><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
-                
+                <li><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
+                <li><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                <li><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
             </ul>
         </li>
-        
-        
-		
-        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+        <li><a href="http://notlocalhost/#contact">Contact</a></li>
     </ul>
 </nav>
+
 
 			</div>
 		</div>
@@ -67,61 +46,49 @@
 				
 				
 <article class="box post">
-    <a href="#" class="image featured"><img src="https://shaundonachy.com/images/kubeval_online.png" alt="" /></a>
+    <a href="#" class="image featured"><img src="http://notlocalhost/images/kubeval_online.png" alt="" /></a>
     <header>
         <h2>Kubeval Online</h2>
         
         <p>Posted 5 Jan 2018</p>
         
     </header>
-    
-
-<h3 id="validate-kubernetes-k8s-yaml-files-online">Validate Kubernetes (k8s) yaml files online.</h3>
-
+    <h3 id="validate-kubernetes-k8s-yaml-files-online">Validate Kubernetes (k8s) yaml files online.</h3>
 <p>This project was inspired by and based on <a href="https://github.com/garethr/kubeval">garethr&rsquo;s kubeval</a>. After attending his talk at Kubecon in December 2017 I put this together to make use of kubeval to perform validations by pasting into a web interface. Garethr&rsquo;s kubeval already has a nice CLI you can use as part of a CI/CD system, and kubevalonline supplements this tool for use during the development process.</p>
-
 <p>Given a kubernetes configuration file with an invalid value such as:</p>
-
-<pre><code class="language-json">apiVersion: v1
-kind: Service
-metadata:
-  name: redis-master
-  labels:
-    app: redis
-    tier: backend
-    role: master
-spec:
-  ports:
-    # the port that this service should serve on
-  - port: sds
-    targetPort: 6379
-  selector:
-    app: redis
-    tier: backend
-    role: master
-</code></pre>
-
-<p>kubeval recognizes that port values should be integer type and not string type then responds with an error:</p>
-
-<pre><code class="language-json">{
-  &quot;Results&quot;: [
-    {
-      &quot;Kind&quot;: &quot;Service&quot;,
-      &quot;Success&quot;: false,
-      &quot;Errors&quot;: [
-        &quot;Invalid type. Expected: integer, given: string&quot;
-      ]
-    }
-  ]
-}
-</code></pre>
-
-<p><code>kubectl run</code> provides a <code>--dry-run</code> flag which can also be used to partially verify that a declaration is valid, but kubeval provides additional information that is valuable when debugging. A handy tool for the kubernaut!</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">apiVersion:</span> <span style="color:#960050;background-color:#1e0010">v</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">kind:</span> <span style="color:#960050;background-color:#1e0010">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">metadata:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#960050;background-color:#1e0010">redis-master</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">labels:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">app:</span> <span style="color:#960050;background-color:#1e0010">redis</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">tier:</span> <span style="color:#960050;background-color:#1e0010">backend</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">role:</span> <span style="color:#960050;background-color:#1e0010">master</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">spec:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">ports:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">port</span> <span style="color:#960050;background-color:#1e0010">that</span> <span style="color:#960050;background-color:#1e0010">this</span> <span style="color:#960050;background-color:#1e0010">service</span> <span style="color:#960050;background-color:#1e0010">should</span> <span style="color:#960050;background-color:#1e0010">serve</span> <span style="color:#960050;background-color:#1e0010">on</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#960050;background-color:#1e0010">port:</span> <span style="color:#960050;background-color:#1e0010">sds</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">targetPort:</span> <span style="color:#ae81ff">6379</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">selector:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">app:</span> <span style="color:#960050;background-color:#1e0010">redis</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">tier:</span> <span style="color:#960050;background-color:#1e0010">backend</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">role:</span> <span style="color:#960050;background-color:#1e0010">master</span>
+</span></span></code></pre></div><p>kubeval recognizes that port values should be integer type and not string type then responds with an error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Results&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Kind&#34;</span>: <span style="color:#e6db74">&#34;Service&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Success&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Errors&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Invalid type. Expected: integer, given: string&#34;</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>kubectl run</code> provides a <code>--dry-run</code> flag which can also be used to partially verify that a declaration is valid, but kubeval provides additional information that is valuable when debugging. A handy tool for the kubernaut!</p>
 <p>The source code is hosted on <a href="https://github.com/donachys/kubevalonline">github</a>. The image can be pulled from <a href="https://hub.docker.com/r/donachys/kubevalonline/">dockerhub</a>.</p>
-
 <p><a href="https://travis-ci.org/donachys/kubevalonline">Travis CI</a> and <a href="https://coveralls.io/github/donachys/kubevalonline?branch=master">coveralls</a> handle the build and code coverage.
-<a href="https://travis-ci.org/donachys/kubevalonline"><img src="https://travis-ci.org/donachys/kubevalonline.svg?branch=master" alt="Build Status" /></a> <a href="https://coveralls.io/github/donachys/kubevalonline?branch=master"><img src="https://coveralls.io/repos/github/donachys/kubevalonline/badge.svg?branch=master" alt="Coverage Status" /></a></p>
+<a href="https://travis-ci.org/donachys/kubevalonline"><img src="https://travis-ci.org/donachys/kubevalonline.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/donachys/kubevalonline?branch=master"><img src="https://coveralls.io/repos/github/donachys/kubevalonline/badge.svg?branch=master" alt="Coverage Status"></a></p>
 
 </article>
 
@@ -144,26 +111,20 @@ spec:
             
             <li>
                 <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
+                <h3><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
                 <p>Ludum Dare 44 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong>23</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <h3><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
                 <p>Ludum Dare 41 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong> 7</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <h3><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
                 <p>My experience so far with Hugo!</p>
-            </li>
-            
-            <li>
-                <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
-                <p></p>
             </li>
             
         </ul>
@@ -180,14 +141,7 @@ spec:
     
 </ul>
                     <ul class="social">
-    
-    
-    
-    
-    
     <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
-    
-    
     
     <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
     
@@ -196,6 +150,7 @@ spec:
     
     
 </ul>
+
                     <ul class="contact">
     
     <li>
@@ -214,7 +169,14 @@ spec:
     </li>
     
     
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
 </ul>
+
                 </section>
             </div>
         </div>
@@ -224,28 +186,29 @@ spec:
         
             <div id="copyright">
                 <ul class="links">
-                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                    <li>&copy; SD. All rights reserved.</li>
                 </ul>
             </div>
 
     </div>
 </div>
+
     </section>
 </div>
 
 	</div>
 
 	
-<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/util.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.min.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.dropotron.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel-viewport.min.js"></script>
+<script src="http://notlocalhost/assets/js/util.js"></script>
 
-<script src="https://shaundonachy.com/assets/js/main.js"></script>
+<script src="http://notlocalhost/assets/js/main.js"></script>
 
     
-    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script src="http://notlocalhost/assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 

@@ -1,22 +1,14 @@
 <!DOCTYPE HTML>
 
-<html>
-	<head>
+<html><head>
     <title>SD</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    <link rel="stylesheet" href="http://notlocalhost/assets/css/main.css" />
     
-        
-        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
-    
-    
-    <meta name="generator" content="Hugo 0.39-DEV" />
-    
-</head>
-	<body class="homepage">
-        
+    </head>
+<body class="homepage">
 	<div id="page-wrapper">
 
 		
@@ -24,39 +16,26 @@
 			<div id="header">
 
 				
-<h1><a href="https://shaundonachy.com/">SD</a></h1>
+<h1><a href="http://notlocalhost/">SD</a></h1>
 				
 <nav id="nav">
     <ul>
-        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
-        
-		
+        <li class="current"><a href="http://notlocalhost/">Home</a></li>
         <li>
-            <a href="https://shaundonachy.com/#projects">Projects</a>
+            <a href="http://notlocalhost/#projects">Projects</a>
         </li>
-        
-        
-        
         <li>
-            <a href="https://shaundonachy.com/blog">Blog</a>
+            <a href="http://notlocalhost/blog">Blog</a>
             <ul>
-                
-                <li><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
-                
+                <li><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
+                <li><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                <li><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
             </ul>
         </li>
-        
-        
-		
-        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+        <li><a href="http://notlocalhost/#contact">Contact</a></li>
     </ul>
 </nav>
+
 
 			</div>
 		</div>
@@ -67,33 +46,22 @@
 				
 				
 <article class="box post">
-    <a href="#" class="image featured"><img src="https://shaundonachy.com/images/dragenvoy_ld26_2018.png" alt="" /></a>
+    <a href="#" class="image featured"><img src="http://notlocalhost/images/dragenvoy_ld26_2018.png" alt="" /></a>
     <header>
         <h2>Dragenvoy - Remix 2018</h2>
         
         <p>Posted 15 Apr 2018</p>
         
     </header>
-    
-
-<h3 id="nostalgia">Nostalgia</h3>
-
+    <h3 id="nostalgia">Nostalgia</h3>
 <p>Looking back over Dragenvoy from 2013 made me disappointed that the unity web player no longer works, and further that I couldn&rsquo;t simply export a new WebGL build with a more recent version of Unity. After getting a bit nostalgic I decided I&rsquo;d like to give Ludum Dare 41 a crack as it is the 5 year anniversary since LD 26 when I made Dragenvoy. I figured it would be good practice to resurrect the old version (if I could.)</p>
-
 <p>I wasn&rsquo;t sure how to proceed with getting a 5 year old project to work with today&rsquo;s Unity, but the first thing I knew I needed to do was rip out the 2d framework I was using. Suprisingly, after running Unity&rsquo;s project upgrade tools (after making a backup), then just completely deleting the 2d toolkit folder from my project everything compiled! Wow, I thought it would take much longer just to rip enough pieces out to get a compiling build. Well, let&rsquo;s see what happens when I run it, splash screen worked&hellip; good&hellip; but as soon as I started moving the dragenvoy everything went haywire. Clearly, the physics engine has changed a bit as well.</p>
-
 <h3 id="re-2d">Re-2D</h3>
-
 <p>Since Unity didn&rsquo;t support 2D back in April 2013 I was using another tool to help manage sprites and spritesheets. Rrrrrriiiiipppp &hellip; took that out. All of my game objects were using custom components for managing sprites. I removed the components from all of my prefabs and the gameobjects that start in a blank level like walls and the background. Next, I needed to re-import all of my image assets as 2D sprites using Unity&rsquo;s importing dialogs and reassign them to their respective gameobjects and prefabs.</p>
-
 <p>Unity now also supports 2D physics. Getting rid of that pesky third dimension prevents a whole class of mistakes that I made in my previous version. But now to make use of it I need to re-instrument all of my prefabs and gameobjects with the new components. Fortunately it wasn&rsquo;t too bad. I ran into one puzzling bug where my gameobjects were not reacting to collisions and flying across the screen as I wanted. Turns out this was just a matter of disabling the &lsquo;Is Trigger&rsquo; checkbox on the appropriate gameobjects.</p>
-
 <h3 id="webgl-works">WebGL works!</h3>
-
 <p>At this point I was actually able to start playing a bit. I tweaked a few aspects of the physics simulation and got rid of the pixelated green background to end up with 2018&rsquo;s remixed Dragenvoy. I recall when Unity started experimenting with WebGL back around 2013 and asm.js. I&rsquo;m glad to see it has now become the standard, way to go! After going through this exercise re-familiarizing myself with unity, I feel better prepared and hope that I may actually end up with something playable after LD 41. Looking forward to the theme reveal on April 20th!</p>
-
 <h3 id="try-it">Try it</h3>
-
 <p>Here is the link to <a href="https://shaundonachy.com/dragenvoy2018/index.html">Dragenvoy - 2018</a>.</p>
 
 </article>
@@ -117,26 +85,20 @@
             
             <li>
                 <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
+                <h3><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
                 <p>Ludum Dare 44 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong>23</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <h3><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
                 <p>Ludum Dare 41 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong> 7</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <h3><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
                 <p>My experience so far with Hugo!</p>
-            </li>
-            
-            <li>
-                <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
-                <p></p>
             </li>
             
         </ul>
@@ -153,14 +115,7 @@
     
 </ul>
                     <ul class="social">
-    
-    
-    
-    
-    
     <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
-    
-    
     
     <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
     
@@ -169,6 +124,7 @@
     
     
 </ul>
+
                     <ul class="contact">
     
     <li>
@@ -187,7 +143,14 @@
     </li>
     
     
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
 </ul>
+
                 </section>
             </div>
         </div>
@@ -197,28 +160,29 @@
         
             <div id="copyright">
                 <ul class="links">
-                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                    <li>&copy; SD. All rights reserved.</li>
                 </ul>
             </div>
 
     </div>
 </div>
+
     </section>
 </div>
 
 	</div>
 
 	
-<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/util.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.min.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.dropotron.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel-viewport.min.js"></script>
+<script src="http://notlocalhost/assets/js/util.js"></script>
 
-<script src="https://shaundonachy.com/assets/js/main.js"></script>
+<script src="http://notlocalhost/assets/js/main.js"></script>
 
     
-    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script src="http://notlocalhost/assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 

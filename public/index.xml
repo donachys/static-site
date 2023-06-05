@@ -1,86 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SD</title>
-    <link>https://shaundonachy.com/</link>
+    <link>http://notlocalhost/</link>
     <description>Recent content on SD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://shaundonachy.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://notlocalhost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Glampire Baby Herder!</title>
-      <link>https://shaundonachy.com/blog/glampire-baby-herder/</link>
+      <link>http://notlocalhost/blog/glampire-baby-herder/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/glampire-baby-herder/</guid>
+      <guid>http://notlocalhost/blog/glampire-baby-herder/</guid>
       <description>Ludum Dare 44! Two more Ludum Dare gamejams passed which I was unable to participate in. When the third one rolled around and I realized another year had gone by I thought about entering but wasn&amp;rsquo;t very serious about it. That&amp;rsquo;s when @mackcam got in touch about working together for the gamejam. Heck yea, I was in for LD44! I figured this time I would keep a pretty casual attitude about completing our submission.</description>
     </item>
     
     <item>
       <title>Cannon-GDX Battle</title>
-      <link>https://shaundonachy.com/projects/cannon-battle-game-libgdx-grpc/</link>
+      <link>http://notlocalhost/projects/cannon-battle-game-libgdx-grpc/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/cannon-battle-game-libgdx-grpc/</guid>
+      <guid>http://notlocalhost/projects/cannon-battle-game-libgdx-grpc/</guid>
       <description>The libGDX project hosted on github has come a long way since I first encountered it during a gamejam in 2013. Multiple platforms including mobile and desktop are supported and the feature set is great! I wanted to try it out and see if it might be a good choice for me to use during game jams and future game projects. Since Java is a fully-supported language for GRPC, I could use libGDX and GRPC to build a client for cannon-go.</description>
     </item>
     
     <item>
       <title>Cannon-Go Battle</title>
-      <link>https://shaundonachy.com/projects/cannon-battle-game-go-grpc/</link>
+      <link>http://notlocalhost/projects/cannon-battle-game-go-grpc/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/cannon-battle-game-go-grpc/</guid>
+      <guid>http://notlocalhost/projects/cannon-battle-game-go-grpc/</guid>
       <description>Designing games is immensely good fun. It&amp;rsquo;s so much fun that I tend to bite off more than I can chew. Previously, I had chatted with @rmbreak about making a clone of the classic gorillas game where players throw explosive bananas at each other. One of the main features being that it is relatively simplistic and we might be able to get to a playable state quickly. Although that project has yet to materialize, the motivations for keeping things simple stuck around.</description>
     </item>
     
     <item>
       <title>Bebop&#39;s Breakout!</title>
-      <link>https://shaundonachy.com/blog/bebops-breakout/</link>
+      <link>http://notlocalhost/blog/bebops-breakout/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/bebops-breakout/</guid>
+      <guid>http://notlocalhost/blog/bebops-breakout/</guid>
       <description>Building a game in 72 hours A couple weeks ago after realizing (in shock) that it had been 5 years since my last GameJam, I decided to commit to LD41. For the uninitiated, GameJams are like hackathons for video games where you build a video game over the course of a weekend. Ludum Dare is one of the largest GameJams and it is run 3 times per year by the awesome @pov Mike.</description>
     </item>
     
     <item>
       <title>Dragenvoy - Remix 2018</title>
-      <link>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/</link>
+      <link>http://notlocalhost/projects/dragenvoy-ld-26-remix-2018/</link>
       <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/</guid>
+      <guid>http://notlocalhost/projects/dragenvoy-ld-26-remix-2018/</guid>
       <description>Nostalgia Looking back over Dragenvoy from 2013 made me disappointed that the unity web player no longer works, and further that I couldn&amp;rsquo;t simply export a new WebGL build with a more recent version of Unity. After getting a bit nostalgic I decided I&amp;rsquo;d like to give Ludum Dare 41 a crack as it is the 5 year anniversary since LD 26 when I made Dragenvoy. I figured it would be good practice to resurrect the old version (if I could.</description>
     </item>
     
     <item>
       <title>Static Site Generator - Hugo</title>
-      <link>https://shaundonachy.com/blog/static-site-with-hugo/</link>
+      <link>http://notlocalhost/blog/static-site-with-hugo/</link>
       <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/static-site-with-hugo/</guid>
+      <guid>http://notlocalhost/blog/static-site-with-hugo/</guid>
       <description>Building a website with Hugo Hugo is a static site generator written in Go (aka golang). It boasts about being super speedy and how it makes building websites fun again. So far I agree with their claims! The LiveReload feature enabled with hugo server --watch is awesome. I often don&amp;rsquo;t even need to reload the web page to see updates and the rebuilds occur on the order of 5-15 ms for this site.</description>
     </item>
     
     <item>
       <title>Kubeval Online</title>
-      <link>https://shaundonachy.com/projects/kubeval-online/</link>
+      <link>http://notlocalhost/projects/kubeval-online/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/kubeval-online/</guid>
+      <guid>http://notlocalhost/projects/kubeval-online/</guid>
       <description>Validate Kubernetes (k8s) yaml files online. This project was inspired by and based on garethr&amp;rsquo;s kubeval. After attending his talk at Kubecon in December 2017 I put this together to make use of kubeval to perform validations by pasting into a web interface. Garethr&amp;rsquo;s kubeval already has a nice CLI you can use as part of a CI/CD system, and kubevalonline supplements this tool for use during the development process.</description>
     </item>
     
     <item>
       <title>2d-midpoint-displacement-rust</title>
-      <link>https://shaundonachy.com/projects/2d-midpoint-displacement-rust/</link>
+      <link>http://notlocalhost/projects/2d-midpoint-displacement-rust/</link>
       <pubDate>Sun, 15 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/2d-midpoint-displacement-rust/</guid>
+      <guid>http://notlocalhost/projects/2d-midpoint-displacement-rust/</guid>
       <description>Scenery image generator written in rust Another project inspired by a blog post.
 I was interested in working with Rust some more and it was an excuse to implement one of my favorite algorithms: Bresenham&amp;rsquo;s line drawing algorithm.
 You can see an example of the output above. Many of the variables are defined as constants in main.rs. Try modifying the image size or colors and generate your own scenery. 😎 The source code is hosted on github.</description>
@@ -88,22 +84,21 @@ You can see an example of the output above. Many of the variables are defined as
     
     <item>
       <title>Automaton Pi</title>
-      <link>https://shaundonachy.com/projects/automaton-pi/</link>
+      <link>http://notlocalhost/projects/automaton-pi/</link>
       <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/automaton-pi/</guid>
-      <description>.centerVid{text-align:center;}
-A raspberry pi project The Automaton Pi project was created while I was studying machine learning with my fellow hackers Mack and Ljiljana and we wanted a hands-on project to work on.
+      <guid>http://notlocalhost/projects/automaton-pi/</guid>
+      <description>A raspberry pi project The Automaton Pi project was created while I was studying machine learning with my fellow hackers Mack and Ljiljana and we wanted a hands-on project to work on.
 Our idea If we can do object detection with a Raspberry Pi camera and use that same RPi to drive the vehicle, then we can create an autonomous RC car. Simple.
 The platform First, we needed to get the platform ready, and the platform was our vehicle-mounted RPi.</description>
     </item>
     
     <item>
       <title>Dragenvoy Ludum Dare 26</title>
-      <link>https://shaundonachy.com/projects/dragenvoy-ld-26/</link>
+      <link>http://notlocalhost/projects/dragenvoy-ld-26/</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/dragenvoy-ld-26/</guid>
+      <guid>http://notlocalhost/projects/dragenvoy-ld-26/</guid>
       <description>I&amp;rsquo;m a fan of game jams and indie game development. One of the game jams I participated in was Ludum Dare 26 with the theme of minimalism. I was reminded of one of the most minimal games &amp;ldquo;snake&amp;rdquo; which folks used to play on the tiny lcd screens of their ancient mobile dumb-phones.
 Tools I used Unity and C# to develop the game over a weekend. The concept was to build a snake game but use physics to determine the movement of the snake.</description>
     </item>

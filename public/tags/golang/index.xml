@@ -1,32 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on SD</title>
-    <link>https://shaundonachy.com/tags/golang/</link>
-    <description>Recent content in Golang on SD</description>
+    <title>golang on SD</title>
+    <link>http://notlocalhost/tags/golang/</link>
+    <description>Recent content in golang on SD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Thu, 27 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://shaundonachy.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://notlocalhost/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cannon-Go Battle</title>
-      <link>https://shaundonachy.com/projects/cannon-battle-game-go-grpc/</link>
+      <link>http://notlocalhost/projects/cannon-battle-game-go-grpc/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/projects/cannon-battle-game-go-grpc/</guid>
+      <guid>http://notlocalhost/projects/cannon-battle-game-go-grpc/</guid>
       <description>Designing games is immensely good fun. It&amp;rsquo;s so much fun that I tend to bite off more than I can chew. Previously, I had chatted with @rmbreak about making a clone of the classic gorillas game where players throw explosive bananas at each other. One of the main features being that it is relatively simplistic and we might be able to get to a playable state quickly. Although that project has yet to materialize, the motivations for keeping things simple stuck around.</description>
     </item>
     
     <item>
       <title>Static Site Generator - Hugo</title>
-      <link>https://shaundonachy.com/blog/static-site-with-hugo/</link>
+      <link>http://notlocalhost/blog/static-site-with-hugo/</link>
       <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shaundonachy.com/blog/static-site-with-hugo/</guid>
+      <guid>http://notlocalhost/blog/static-site-with-hugo/</guid>
       <description>Building a website with Hugo Hugo is a static site generator written in Go (aka golang). It boasts about being super speedy and how it makes building websites fun again. So far I agree with their claims! The LiveReload feature enabled with hugo server --watch is awesome. I often don&amp;rsquo;t even need to reload the web page to see updates and the rebuilds occur on the order of 5-15 ms for this site.</description>
     </item>
     

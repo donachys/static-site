@@ -1,22 +1,14 @@
 <!DOCTYPE HTML>
 
-<html>
-	<head>
+<html><head>
     <title>SD</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="https://shaundonachy.com/assets/css/main.css" />
+    <link rel="stylesheet" href="http://notlocalhost/assets/css/main.css" />
     
-        
-        <link rel="stylesheet" href="https://shaundonachy.com/assets/css/styles/railscasts.css">
-    
-    
-    <meta name="generator" content="Hugo 0.39-DEV" />
-    
-</head>
-	<body class="homepage">
-        
+    </head>
+<body class="homepage">
 	<div id="page-wrapper">
 
 		
@@ -24,39 +16,26 @@
 			<div id="header">
 
 				
-<h1><a href="https://shaundonachy.com/">SD</a></h1>
+<h1><a href="http://notlocalhost/">SD</a></h1>
 				
 <nav id="nav">
     <ul>
-        <li class="current"><a href="https://shaundonachy.com/">Home</a></li>
-        
-		
+        <li class="current"><a href="http://notlocalhost/">Home</a></li>
         <li>
-            <a href="https://shaundonachy.com/#projects">Projects</a>
+            <a href="http://notlocalhost/#projects">Projects</a>
         </li>
-        
-        
-        
         <li>
-            <a href="https://shaundonachy.com/blog">Blog</a>
+            <a href="http://notlocalhost/blog">Blog</a>
             <ul>
-                
-                <li><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
-                
-                <li><a href="https://shaundonachy.com/blog/">Blogs</a></li>
-                
+                <li><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></li>
+                <li><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></li>
+                <li><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></li>
             </ul>
         </li>
-        
-        
-		
-        <li><a href="https://shaundonachy.com/#contact">Contact</a></li>
+        <li><a href="http://notlocalhost/#contact">Contact</a></li>
     </ul>
 </nav>
+
 
 			</div>
 		</div>
@@ -67,47 +46,29 @@
 				
 				
 <article class="box post">
-    <a href="#" class="image featured"><img src="https://shaundonachy.com/images/automaton_pi.jpg" alt="" /></a>
+    <a href="#" class="image featured"><img src="http://notlocalhost/images/automaton_pi.jpg" alt="" /></a>
     <header>
         <h2>Automaton Pi</h2>
         
         <p>Posted 20 Sep 2014</p>
         
     </header>
-    
-
-<p><style type="text/css">.centerVid{text-align:center;}</style></p>
-
+    <!-- raw HTML omitted -->
 <h3 id="a-raspberry-pi-project">A raspberry pi project</h3>
-
 <p>The Automaton Pi project was created while I was studying machine learning with my fellow hackers <a href="https://mackstump.com/">Mack</a> and <a href="https://github.com/zljiljana">Ljiljana</a> and we wanted a hands-on project to work on.</p>
-
 <h3 id="our-idea">Our idea</h3>
-
 <p>If we can do object detection with a Raspberry Pi camera and use that same RPi to drive the vehicle, then we can create an autonomous RC car. Simple.</p>
-
 <h3 id="the-platform">The platform</h3>
-
 <p>First, we needed to get the platform ready, and the platform was our vehicle-mounted RPi. We acquired a pulse-width modulation servo driver from <a href="https://adafruit.com">Adafruit</a>. We hacked the Helion Animus RC car and replaced its all-in-one components with an electronic speed control. The steering servo was usable from the original vehicle.</p>
-
-<div class="image centered"><image src="../../images/automaton_pi_pwm_controller.png"></image></div>
-
+<!-- raw HTML omitted -->
 <p>We succeeded in getting the python script to control the steering servo of the vehicle.</p>
-
-<div class="centerVid"><video src="../../mov/wheel_servo_action.m4v" controls controlsList="nodownload" preload="metadata" poster="../../mov/wheel_servo_action.png"></video></div>
-
+<!-- raw HTML omitted -->
 <p>It was a challenge to reverse engineer the signal protocol for the electronic speed control. With some trial and error, we were able to get the motor to accelerate nicely. Getting reverse to work correctly took a bit more to figure out. Some RC enthusiast forums came in handy for solving that one.</p>
-
-<div class="centerVid"><video src="../../mov/esc_motor_action.m4v" controls controlsList="nodownload" preload="metadata" poster="../../mov/esc_motor_action.png"></video></div>
-
+<!-- raw HTML omitted -->
 <p>Mounted everything on the vehicle and took it for a spin! Wow, it works! The RPi is powered by a portable battery 5v battery intended for phone charging. Unfortunately using the keyboard doesnt provide as fine of control as an analog joystick might&hellip;</p>
-
-<div class="centerVid"><video src="../../mov/driving_action.m4v" controls controlsList="nodownload" preload="metadata" poster="../../mov/driving_action.png"></video></div>
-
+<!-- raw HTML omitted -->
 <p>Yes, that&rsquo;s pretty much what it looks like when I try to use a mouse and keyboard to play Rocket League. Maybe better. So the next challenge was getting bluetooth to work with a (ps3) controller. Then we needed to get the signal from the joystick into python. We ended up needing to switch from the Raspbian distribution to the arch pi distribution for an upgraded version of Bluez. Bluez understood how to pair and work with the PS3 controller, and pygame was able to pick up the controller inputs! We were in business! Even with the limited range it was exhilirating to be driving my (formerly busted) RC car again, but this time with controller!</p>
-
 <p>Getting to this point was quite a challenge, but a great learning experience. The vehicle platform was then ready for the next phase. We need a method of capturing driver input and begin gathering training data on a task. We&rsquo;ll also need a fast way of accessing imagery from the RPi camera to perform some basic image processing. With some good luck we may yet have an automaton!</p>
-
 <h4 id="to-be-continued">To Be Continued&hellip;</h4>
 
 </article>
@@ -131,26 +92,20 @@
             
             <li>
                 <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
+                <h3><a href="http://notlocalhost/blog/glampire-baby-herder/">Glampire Baby Herder!</a></h3>
                 <p>Ludum Dare 44 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong>23</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
+                <h3><a href="http://notlocalhost/blog/bebops-breakout/">Bebop&#39;s Breakout!</a></h3>
                 <p>Ludum Dare 41 Compo Entry</p>
             </li>
             
             <li>
                 <span class="date">Apr <strong> 7</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
+                <h3><a href="http://notlocalhost/blog/static-site-with-hugo/">Static Site Generator - Hugo</a></h3>
                 <p>My experience so far with Hugo!</p>
-            </li>
-            
-            <li>
-                <span class="date">May <strong> 1</strong></span>
-                <h3><a href="https://shaundonachy.com/blog/">Blogs</a></h3>
-                <p></p>
             </li>
             
         </ul>
@@ -167,14 +122,7 @@
     
 </ul>
                     <ul class="social">
-    
-    
-    
-    
-    
     <li><a class="icon fa-linkedin" href="https://www.linkedin.com/in/donachys"><span class="label">LinkedIn</span></a></li>
-    
-    
     
     <li><a class="icon fa-github" href="https://github.com/donachys"><span class="label">GitHub</span></a></li>
     
@@ -183,6 +131,7 @@
     
     
 </ul>
+
                     <ul class="contact">
     
     <li>
@@ -201,7 +150,14 @@
     </li>
     
     
+    <li>
+        <h3>Mail</h3>
+        <p><a href="mailto:shaun@donachy.me">shaun@donachy.me</a></p>
+    </li>
+    
+    
 </ul>
+
                 </section>
             </div>
         </div>
@@ -211,28 +167,29 @@
         
             <div id="copyright">
                 <ul class="links">
-                    <li>&copy; Shaun Donachy. All rights reserved.</li>
+                    <li>&copy; SD. All rights reserved.</li>
                 </ul>
             </div>
 
     </div>
 </div>
+
     </section>
 </div>
 
 	</div>
 
 	
-<script src="https://shaundonachy.com/assets/js/jquery.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/jquery.dropotron.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/skel-viewport.min.js"></script>
-<script src="https://shaundonachy.com/assets/js/util.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.min.js"></script>
+<script src="http://notlocalhost/assets/js/jquery.dropotron.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel.min.js"></script>
+<script src="http://notlocalhost/assets/js/skel-viewport.min.js"></script>
+<script src="http://notlocalhost/assets/js/util.js"></script>
 
-<script src="https://shaundonachy.com/assets/js/main.js"></script>
+<script src="http://notlocalhost/assets/js/main.js"></script>
 
     
-    <script src="https://shaundonachy.com/assets/js/highlight.pack.js"></script>
+    <script src="http://notlocalhost/assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 

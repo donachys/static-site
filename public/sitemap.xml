@@ -2,111 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://notlocalhost/tags/2d/</loc>
+    <loc>https://shaundonachy.com/tags/2d/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/c#/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2023/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/gamejam/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/games/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/projects/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/unity/</loc>
+    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shaundonachy.com/tags/adventure/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/adventure/</loc>
+    <loc>https://shaundonachy.com/tags/audacity/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/audacity/</loc>
+    <loc>https://shaundonachy.com/blog/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/blog/</loc>
+    <loc>https://shaundonachy.com/blog/glampire-baby-herder/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/c#/</loc>
+    <loc>https://shaundonachy.com/tags/ludum-dare/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/gamejam/</loc>
+    <loc>https://shaundonachy.com/tags/top-down/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/blog/glampire-baby-herder/</loc>
+    <loc>https://shaundonachy.com/tags/unity3d/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/ludum-dare/</loc>
+    <loc>https://shaundonachy.com/tags/your-life-is-currency/</loc>
     <lastmod>2019-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/top-down/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/unity/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/unity3d/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/your-life-is-currency/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/projects/cannon-battle-game-libgdx-grpc/</loc>
+    <loc>https://shaundonachy.com/projects/cannon-battle-game-libgdx-grpc/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/game/</loc>
+    <loc>https://shaundonachy.com/tags/game/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/grpc/</loc>
+    <loc>https://shaundonachy.com/tags/grpc/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/java/</loc>
+    <loc>https://shaundonachy.com/tags/java/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/libgdx/</loc>
+    <loc>https://shaundonachy.com/tags/libgdx/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/multiplayer/</loc>
+    <loc>https://shaundonachy.com/tags/multiplayer/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/projects/cannon-battle-game-go-grpc/</loc>
+    <loc>https://shaundonachy.com/projects/cannon-battle-game-go-grpc/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/go/</loc>
+    <loc>https://shaundonachy.com/tags/go/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/golang/</loc>
+    <loc>https://shaundonachy.com/tags/golang/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/blog/bebops-breakout/</loc>
+    <loc>https://shaundonachy.com/blog/bebops-breakout/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/point-and-click/</loc>
+    <loc>https://shaundonachy.com/tags/point-and-click/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/text/</loc>
+    <loc>https://shaundonachy.com/tags/text/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/dragenvoy-ld-26-remix-2018/</loc>
+    <loc>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/</loc>
     <lastmod>2018-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/tags/games/</loc>
-    <lastmod>2018-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://notlocalhost/tags/hugo/</loc>
+    <loc>https://shaundonachy.com/tags/hugo/</loc>
     <lastmod>2018-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/blog/static-site-with-hugo/</loc>
+    <loc>https://shaundonachy.com/blog/static-site-with-hugo/</loc>
     <lastmod>2018-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/kubeval-online/</loc>
+    <loc>https://shaundonachy.com/projects/kubeval-online/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/2d-midpoint-displacement-rust/</loc>
+    <loc>https://shaundonachy.com/projects/2d-midpoint-displacement-rust/</loc>
     <lastmod>2017-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/automaton-pi/</loc>
+    <loc>https://shaundonachy.com/projects/automaton-pi/</loc>
     <lastmod>2014-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/projects/dragenvoy-ld-26/</loc>
+    <loc>https://shaundonachy.com/projects/dragenvoy-ld-26/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://notlocalhost/categories/</loc>
+    <loc>https://shaundonachy.com/categories/</loc>
   </url>
 </urlset>

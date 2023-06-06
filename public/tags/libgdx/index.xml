@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>libGDX on SD</title>
-    <link>http://notlocalhost/tags/libgdx/</link>
+    <link>https://shaundonachy.com/tags/libgdx/</link>
     <description>Recent content in libGDX on SD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://notlocalhost/tags/libgdx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://shaundonachy.com/tags/libgdx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cannon-GDX Battle</title>
-      <link>http://notlocalhost/projects/cannon-battle-game-libgdx-grpc/</link>
+      <link>https://shaundonachy.com/projects/cannon-battle-game-libgdx-grpc/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://notlocalhost/projects/cannon-battle-game-libgdx-grpc/</guid>
+      <guid>https://shaundonachy.com/projects/cannon-battle-game-libgdx-grpc/</guid>
       <description>The libGDX project hosted on github has come a long way since I first encountered it during a gamejam in 2013. Multiple platforms including mobile and desktop are supported and the feature set is great! I wanted to try it out and see if it might be a good choice for me to use during game jams and future game projects. Since Java is a fully-supported language for GRPC, I could use libGDX and GRPC to build a client for cannon-go.</description>
     </item>
     

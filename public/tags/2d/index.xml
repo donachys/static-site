@@ -2,27 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2D on SD</title>
-    <link>http://notlocalhost/tags/2d/</link>
+    <link>https://shaundonachy.com/tags/2d/</link>
     <description>Recent content in 2D on SD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Shaun Donachy</copyright>
-    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://notlocalhost/tags/2d/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://shaundonachy.com/tags/2d/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dragenvoy - Remix 2023</title>
+      <link>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2023/</link>
+      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2023/</guid>
+      <description>10-Year Anniversary Edition! Dragenvoy has enjoyed 10 glorious years on the web. 👏👏👏 Fans of this famous game will recall that it received an update in 2018 to improve browser compatibility. I thought it would be a good time to make an update to the game ten years after I made it for ludum dare 26 and celebrate the closing of my chapter working at Unity that began many years later.</description>
+    </item>
+    
     <item>
       <title>Glampire Baby Herder!</title>
-      <link>http://notlocalhost/blog/glampire-baby-herder/</link>
+      <link>https://shaundonachy.com/blog/glampire-baby-herder/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://notlocalhost/blog/glampire-baby-herder/</guid>
+      <guid>https://shaundonachy.com/blog/glampire-baby-herder/</guid>
       <description>Ludum Dare 44! Two more Ludum Dare gamejams passed which I was unable to participate in. When the third one rolled around and I realized another year had gone by I thought about entering but wasn&amp;rsquo;t very serious about it. That&amp;rsquo;s when @mackcam got in touch about working together for the gamejam. Heck yea, I was in for LD44! I figured this time I would keep a pretty casual attitude about completing our submission.</description>
     </item>
     
     <item>
       <title>Dragenvoy - Remix 2018</title>
-      <link>http://notlocalhost/projects/dragenvoy-ld-26-remix-2018/</link>
+      <link>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/</link>
       <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://notlocalhost/projects/dragenvoy-ld-26-remix-2018/</guid>
+      <guid>https://shaundonachy.com/projects/dragenvoy-ld-26-remix-2018/</guid>
       <description>Nostalgia Looking back over Dragenvoy from 2013 made me disappointed that the unity web player no longer works, and further that I couldn&amp;rsquo;t simply export a new WebGL build with a more recent version of Unity. After getting a bit nostalgic I decided I&amp;rsquo;d like to give Ludum Dare 41 a crack as it is the 5 year anniversary since LD 26 when I made Dragenvoy. I figured it would be good practice to resurrect the old version (if I could.</description>
     </item>
     
